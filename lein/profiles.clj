@@ -6,4 +6,5 @@
      [lein-try "0.4.3"]
     ]
   }
+  :signing {:gpg-key "2048R/B44D04C7"}
 }
