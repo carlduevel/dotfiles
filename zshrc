@@ -92,3 +92,4 @@ tickle () {
     shift
     inbox +tickle wait:$deadline $@
 }
+. /usr/share/autojump/autojump.sh
