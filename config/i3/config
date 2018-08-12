@@ -203,3 +203,9 @@ exec --no-startup-id "clipit"
 exec --no-startup-id "udiskie"
 # lock screen if lid closed
 exec --no-startup-id "xss-lock -- display-lock"
+# start dropbox daemon
+exec --no-startup-id "dropbox start"
+# start flux 
+exec --no-startup-id "fluxgui"
+# start network manager
+exec --no-startup-id "nm-applet"
