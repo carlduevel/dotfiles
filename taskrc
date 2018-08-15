@@ -29,11 +29,13 @@ data.location=~/.task
 #include /usr/share/doc/task/rc/solarized-light-256.theme
 #include /usr/share/doc/task/rc/no-color.theme
 
-taskd.server=freecinc.com:53589
-taskd.key=~/.task/freecinc_b41d33fd.key.pem
-taskd.certificate=~/.task/freecinc_b41d33fd.cert.pem
-taskd.ca=~/.task/freecinc_b41d33fd.ca.pem
-taskd.credentials=FreeCinc\/freecinc_b41d33fd\/cdde60f9-9be8-4c26-a8d7-222521c2967d
+
+taskd.certificate=~/.task/certificates/inthe.am/private.certificate.pem
+taskd.key=~/.task/certificates/inthe.am/private.key.pem
+taskd.ca=~/.task/certificates/inthe.am/ca.cert.pem
+taskd.server=taskwarrior.inthe.am:53589
+taskd.credentials=inthe_am/c.a.duevel/2e31b75a-d55a-45b7-9c62-d94b44c5e2f8
+taskd.trust=ignore hostname
 
 context.home=+home or +web or +hasi or +computer
 
