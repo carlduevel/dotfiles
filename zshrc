@@ -93,3 +93,4 @@ tickle () {
     inbox +tickle wait:$deadline $@
 }
 . /usr/share/autojump/autojump.sh
+alias t=task
