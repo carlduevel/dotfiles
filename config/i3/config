@@ -17,7 +17,10 @@ set $mod Mod4
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:DejaVu Sans Mono 8
+#font pango:DejaVu Sans Mono 8
+
+# font for window titles. ISO 10646 = Unicode
+font pango: M+ 1m, FontAwesome, Ionicons, 10
 
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -104,8 +107,8 @@ set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
-set $ws9 "9"
-set $ws10 "10"
+set $ws9 "9: "
+set $ws10 "10: "
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -192,7 +195,11 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 5 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightness
 
 # Assigns
-assign [class="Slack"] 10
+assign [class="Slack"] $ws9
+assign [class="Franz"] $ws9
+assign [class="Signal"] $ws9
+assign [class="Spotify"] $ws10
+
 
 # Switch off trackpad
 exec --no-startup-id xinput --disable "SynPS/2 Synaptics TouchPad"
@@ -217,5 +224,3 @@ exec --no-startup-id "nm-applet"
 # start bluetooth manager
 exec --no-startup-id "blueman-applet"
 
-
-default_border pixel 1
