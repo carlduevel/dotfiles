@@ -211,25 +211,5 @@ exec --no-startup-id xinput --disable "SynPS/2 Synaptics TouchPad"
 exec_always --no-startup-id "setxkbmapb-model pc104 -layout de"
 # wallpaper
 exec_always --no-startup-id "feh --randomize --bg-scale ~/.wallpaper"
-# better clipboard 
-exec --no-startup-id "clipit"
-# automount devices
-exec --no-startup-id "udiskie"
 # lock screen if lid closed
 exec --no-startup-id "xss-lock -- display-lock"
-# start dropbox daemon
-exec --no-startup-id "dropbox start"
-# start flux 
-exec --no-startup-id "redshift-gtk"
-# start slack chat client
-exec --no-startup-id "slack"
-# start network manager
-exec --no-startup-id "nm-applet"
-# start bluetooth manager
-exec --no-startup-id "blueman-applet"
-# start spotify
-exec --no-startup-id "spotify"
-# start anki
-exec --no-startup-id "anki"
-
-

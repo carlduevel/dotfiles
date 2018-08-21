@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Load gnome-keyring
+dbus-update-activation-environment --systemd DISPLAY
+eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
+export SSH_AUTH_SOCK
+
+volumeicon &
+nm-applet &
+redshift-gtk &
+blueman-applet &
+clipit &
+udiskie &
+dropbox start -i &
+slack &
+spotify &
+anki &
