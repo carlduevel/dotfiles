@@ -41,5 +41,5 @@ if internet_connected():
 	# Call the `sync` command
 	# hooks=0 ensures that the sync command doesn't call the on-exit hook
 	# verbose=nothing sets the verbosity to print nothing at all
-	subprocess.call(["task", "rc.hooks=0", "rc.verbose=nothing", "sync"])
+	subprocess.call(["task", "rc.hooks=0", "rc.verbose=nothing", "sync"],timeout=2)
 
