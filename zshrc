@@ -94,3 +94,4 @@ tickle () {
 }
 . /usr/share/autojump/autojump.sh
 alias t=task
+alias tw=timew
