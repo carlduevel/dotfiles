@@ -204,6 +204,8 @@ assign [class="Anki"] $ws8
 for_window [class="Spotify"] move to workspace $ws10
 # Anki opens a lot of windows
 for_window [title="Anki - User 1"] focus; split h; layout stacked
+# https://github.com/keybase/client/issues/8232
+for_window [title="tracker - .*"] floating enable
 
 # Switch off trackpad
 exec --no-startup-id xinput --disable "SynPS/2 Synaptics TouchPad"
