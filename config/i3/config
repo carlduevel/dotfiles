@@ -210,11 +210,14 @@ for_window [title="tracker - .*"] floating enable
 # Switch off trackpad
 exec --no-startup-id xinput --disable "SynPS/2 Synaptics TouchPad"
 # German keyboard layout
-exec_always --no-startup-id "setxkbmapb-model pc104 -layout de"
+exec_always --no-startup-id "setxkbmap -model advantage -layout us,de -option 'grp:alt_space_toggle'"
 # wallpaper
 exec_always --no-startup-id "feh --randomize --bg-scale ~/.wallpaper"
 # lock screen if lid closed
 exec --no-startup-id "xss-lock -- display-lock"
+# docking station daemon
+exec --no-startup-id dockd --daemon
+
 
 set $Locker display-lock && sleep 1
 
