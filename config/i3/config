@@ -210,7 +210,7 @@ for_window [title="tracker - .*"] floating enable
 # Switch off trackpad
 exec --no-startup-id xinput --disable "SynPS/2 Synaptics TouchPad"
 # German keyboard layout
-exec --no-startup-id "setxkbmap -model advantage -layout us,de -option 'grp:alt_space_toggle'"
+exec --no-startup-id "setxkbmap -layout de"
 # wallpaper
 exec_always --no-startup-id "feh --randomize --bg-scale ~/.wallpaper"
 # lock screen if lid closed

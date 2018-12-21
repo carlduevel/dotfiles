@@ -51,7 +51,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git aws terraform taskwarrior kubectl lein rails nvm)
+plugins=(git aws terraform taskwarrior kubectl lein rails nvm nix)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -95,3 +95,6 @@ tickle () {
 . /usr/share/autojump/autojump.sh
 alias t=task
 alias tw=timew
+aal (){
+xinput --list | grep Advantage2 | cut -f2 | tr -d "id="| tail -n+2 |while read id; do setxkbmap -device $id -option compose:sclk -layout us; done
+}
