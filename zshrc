@@ -86,7 +86,7 @@ source $ZSH/oh-my-zsh.sh
 eval $(thefuck --alias)
 alias waiting='task "(status:pending or status:waiting)" and +waiting all'
 eval "$(rbenv init -)"
-alias inbox='task +inbox due:tomorrow'
+alias inbox='task add +inbox due:tomorrow'
 tickle () {
     deadline=$1
     shift
@@ -96,5 +96,6 @@ tickle () {
 alias t=task
 alias tw=timew
 aal (){
-xinput --list | grep Advantage2 | cut -f2 | tr -d "id="| tail -n+2 |while read id; do setxkbmap -device $id -option compose:sclk -layout us; done
+xinput --list | grep Advantage2 | cut -f2 | tr -d "id="| tail -n+2 |while read id; do setxkbmap -device $id -model kinesis -option compose:sclk -layout us; done
+xmodmap -e "keycode 94 = backslash bar"
 }
