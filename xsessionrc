@@ -9,7 +9,7 @@ volumeicon &
 nm-applet &
 redshift-gtk &
 blueman-applet &
-clipit &
+greenclip daemon &
 udiskie &
 dropbox start -i &
 slack &
