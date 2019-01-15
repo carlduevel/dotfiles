@@ -44,8 +44,9 @@ bindsym $mod+Shift+q kill
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
 #bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
-bindsym $mod+d exec --no-startup-id "rofi -combi-modi 'drun,ssh,window,run'  rofi -modi 'clipboard:greenclip print'  -modi combi,clipboard -show combi -theme solarized"
+bindsym $mod+d exec --no-startup-id "rofi -combi-modi 'drun,ssh,window,run' -modi 'combi,clipboard:greenclip print'  -show combi -theme solarized"
 
+bindsym $mod+c exec --no-startup-id "rofi -modi 'clipboard:greenclip print' -show clipboard"
 
 # change focus
 bindsym $mod+h focus left
@@ -82,6 +83,7 @@ bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
+
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
