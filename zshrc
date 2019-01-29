@@ -98,4 +98,4 @@ alias tw=timew
 aal (){
 xinput --list | grep Advantage2 | cut -f2 | tr -d "id="| tail -n+2 |while read id; do setxkbmap -device $id -model kinesis -option compose:sclk -layout us; done
 }
-alias e="emacsclient -nw"
+alias e="emacsclient -nw -a -c"
