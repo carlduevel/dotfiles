@@ -2,7 +2,7 @@
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/carl/.oh-my-zsh
+export ZSH=/home/carl/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -98,4 +98,12 @@ alias tw=timew
 aal (){
 xinput --list | grep Advantage2 | cut -f2 | tr -d "id="| tail -n+2 |while read id; do setxkbmap -device $id -model kinesis -option compose:sclk -layout us; done
 }
-alias e="emacsclient --alternate-editor='' --create-frame"
+emacs_command="emacsclient --alternate-editor='' --create-frame"
+alias e=$emacs_command
+export MAIL='/var/mail/carl'
+export EDITOR=$emacs_command
+alias cb="xclip -sel clip"
+alias sm="HOME=~/spacemacs emacs"
+
+
+
