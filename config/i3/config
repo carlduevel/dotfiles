@@ -199,9 +199,7 @@ bindsym XF86MonBrightnessDown exec sudo brightnessctl s 5%- # decrease screen br
 
 # Assigns
 assign [class="Slack"] $ws9
-assign [class="Franz"] $ws9
 assign [class="Signal"] $ws9
-assign [class="Anki"] $ws8
 # https://github.com/i3/i3/issues/2060
 for_window [class="Spotify"] move to workspace $ws10
 # Anki opens a lot of windows
