@@ -14,5 +14,4 @@ udiskie &
 dropbox start -i &
 slack &
 spotify &
-anki &
 emacs --daemon &
