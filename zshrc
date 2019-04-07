@@ -95,9 +95,6 @@ tickle () {
 . /usr/share/autojump/autojump.sh
 alias t=task
 alias tw=timew
-aal (){
-xinput --list | grep Advantage2 | cut -f2 | tr -d "id="| tail -n+2 |while read id; do setxkbmap -device $id -model kinesis -option compose:sclk -layout us; done
-}
 emacs_command="emacsclient --alternate-editor='' --create-frame"
 alias e=$emacs_command
 export MAIL='/var/mail/carl'
