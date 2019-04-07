@@ -95,12 +95,13 @@ tickle () {
 . /usr/share/autojump/autojump.sh
 alias t=task
 alias tw=timew
-emacs_command="emacsclient --alternate-editor='' --create-frame"
-alias e=$emacs_command
+function e(){
+  emacsclient --alternate-editor='' --create-frame $1 & disown %+
+} 
 export MAIL='/var/mail/carl'
 export EDITOR=$emacs_command
 alias cb="xclip -sel clip"
 alias sm="HOME=~/spacemacs emacs"
-
-
-
+function o(){
+  xdg-open $1 > /dev/null 2>&1& disown %+
+}
