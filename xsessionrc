@@ -4,14 +4,5 @@
 dbus-update-activation-environment --systemd DISPLAY
 eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
 export SSH_AUTH_SOCK
-
-volumeicon &
-nm-applet &
-redshift-gtk &
-blueman-applet &
 greenclip daemon &
-udiskie &
-dropbox start -i &
-slack &
-spotify &
 emacs --daemon &
