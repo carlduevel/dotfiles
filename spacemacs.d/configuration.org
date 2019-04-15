@@ -1,0 +1,90 @@
+#+TITLE: Emacs configuration
+#+AUTHOR: Carl Düvel
+#+EMAIL: c.a.duevel@gmail.com 
+* Editing
+** Escape mode
+#+BEGIN_SRC emacs-lisp
+  (setq-default evil-escape-delay 0.2)
+  (setq-default evil-escape-key-sequence "jk")
+#+END_SRC
+** Save Buffer on focus out
+Give Emacs the nice IDEA feature of "auto-save on focus lost".
+Pulled from [[https://emacsredux.com/blog/2014/03/22/a-peek-at-emacs-24-dot-4-focus-hooks/][here.]]
+#+BEGIN_SRC emacs-lisp
+(add-hook 'focus-out-hook (lambda () (save-some-buffers t)))
+#+END_SRC
+** Automatic Line Breaks
+#+BEGIN_SRC emacs-lisp
+(add-hook 'text-mode-hook 'auto-fill-mode)
+#+END_SRC
+** Multicursors
+#+BEGIN_SRC emacs-lisp
+  (global-evil-mc-mode 1)
+#+END_SRC
+
+* Org mode
+** UI
+Always indent for better overview.
+#+BEGIN_SRC emacs-lisp
+(add-hook 'org-mode-hook 'org-indent-mode)
+#+END_SRC
+** GTD setup
+#+BEGIN_SRC emacs-lisp
+(require 'org)
+(setq gtd-dir "~/Dropbox/org/gtd/")
+(setq inbox-file (concat gtd-dir "inbox.org"))
+(setq gtd-file (concat gtd-dir "gtd.org"))
+(setq tickler-file (concat gtd-dir "tickler.org"))
+(setq org-agenda-files (list
+                        inbox-file
+                        gtd-file
+                        tickler-file))
+(setq org-agenda-skip-scheduled-if-done t)
+(setq org-agenda-skip-deadline-prewarning-if-scheduled t)
+(setq org-agenda-skip-deadline-if-done t)
+
+
+
+(setq org-todo-keywords
+      '((sequence "TODO" "|" "DONE")
+        (sequence "PROJECT" "AGENDA" "|" "MINUTES")
+        (sequence "WAITING" "|" "PROGRESS")))
+
+
+(setq org-refile-targets '((org-agenda-files :maxlevel . 3)))
+(setq org-refile-use-outline-path 'file)
+
+(setq org-agenda-custom-commands
+      '(("h" "@home" tags-todo "@home")
+        ("c" "@computer" tags-todo "@computer")
+        ("H" "+hasi" tags-todo "+hasi")
+        ("p" "@phone" tags-todo "@phone")
+        ("b" "@BO" tags-todo "@BO")))
+#+END_SRC
+Org Capture Templates are explained [[http://orgmode.org/manual/Capture-templates.html][here]] and Org Template expansion
+[[http://orgmode.org/manual/Template-expansion.html#Template-expansion][here.]] There is also a  need to load org-protocol to get the
+[[https://github.com/sprig/org-capture-extension][org-capture-extension]] going.
+
+#+BEGIN_SRC emacs-lisp
+  (setq org-default-notes-file  inbox-file)
+  (define-key global-map "\C-cc" 'org-capture)
+
+  (require 'org-protocol)
+
+
+  (setq org-capture-templates '(("t" "Todo" entry
+                                 (file+headline  inbox-file "Misc")"* TODO %i%?")
+                                ("i" "Idea" entry
+                                 (file  "~/Dropbox/org/ideas.org")"* %i%?")
+                                ("p" "Protocol" entry
+                                 (file+headline inbox-file "Inbox")
+                                 "* %^{Title}\nSource: %u, %c\n #+BEGIN_QUOTE\n%i\n#+END_QUOTE\n\n\n%?")
+                                ("L" "Protocol Link" entry
+                                 (file+headline inbox-file "Inbox")
+                                 "* %? [[%:link][%:description]] \nCaptured on: %U")
+                                ("T" "Tickler" entry
+                                 (file+headline tickler-file "Tickler")
+                                 "* %i%? \n %U")))
+
+#+END_SRC
+
