@@ -31,33 +31,22 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
-     ;; ----------------------------------------------------------------
-     ;; Example of useful layers you may want to use right away.
-     ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
-     ;; <M-m f e R> (Emacs style) to install them.
-     ;; ----------------------------------------------------------------
-     helm
+     ansible
      auto-completion
-     ;; better-defaults
+     chrome
+     docker
      emacs-lisp
-     git
-     markdown
      emacs-lisp 
+     git
+     helm
+     markdown
      org
+     restclient
      shell-scripts
-     ;; (shell :variables
-     ;;        shell-default-height 30
-     ;;        shell-default-position 'bottom)
      spell-checking
      syntax-checking
-     version-control
-
-     docker
-     ansible
-     restclient
-     chrome
-
      thesaurus
+     version-control
      yaml
      )
    ;; List of additional packages that will be installed without being
