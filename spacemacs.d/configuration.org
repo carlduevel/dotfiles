@@ -99,4 +99,14 @@ Org Capture Templates are explained [[http://orgmode.org/manual/Capture-template
                                  "* %i%? \n %U")))
 
 #+END_SRC
+* Neotree
+In order to have nice icons for neotree[[https://github.com/domtronn/all-the-icons.el][ all-the-icons package]]  has to be installed.
+#+BEGIN_SRC emacs-lisp 
+(setq neo-theme 'icons)
+#+END_SRC
+Add source control integration.
+According to this[[https://github.com/jaypei/emacs-neotree/issues/126][ bug report]] this is not performing well on big projects.
+#+BEGIN_SRC emacs-lisp
+(setq neo-vc-integration '(face))
+#+END_SRC
 
