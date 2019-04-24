@@ -1,0 +1,3 @@
+[submodule "spacemacs.d/layers/journal"]
+	path = spacemacs.d/layers/journal
+	url = git@github.com:ruibinx/spacemacs-journal.git
