@@ -40,6 +40,7 @@ values."
      helm
      markdown
      org
+     python
      restclient
      shell-scripts
      spell-checking
