@@ -47,6 +47,7 @@ values."
      syntax-checking
      thesaurus
      version-control
+     writeroom
      yaml
      )
    ;; List of additional packages that will be installed without being
