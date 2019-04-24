@@ -105,6 +105,7 @@ alias sm="HOME=~/spacemacs emacs"
 function o(){
   xdg-open $1 > /dev/null 2>&1& disown %+
 }
+alias tf=terraform
 fpath=(~/opt/gcloud-zsh-completion/src $fpath)
 autoload -U compinit compdef
 compinit
