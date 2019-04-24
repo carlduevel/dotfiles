@@ -36,7 +36,6 @@ values."
      chrome
      docker
      emacs-lisp
-     emacs-lisp 
      git
      helm
      markdown
