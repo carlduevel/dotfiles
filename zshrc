@@ -84,16 +84,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 eval $(thefuck --alias)
-alias waiting='task "(status:pending or status:waiting)" and +waiting all'
 eval "$(rbenv init -)"
-alias inbox='task add +inbox due:tomorrow'
-tickle () {
-    deadline=$1
-    shift
-    inbox +tickle wait:$deadline $@
-}
 . /usr/share/autojump/autojump.sh
-alias t=task
 alias tw=timew
 function e(){
   emacsclient --alternate-editor='' --create-frame $1 & disown %+
@@ -101,7 +93,6 @@ function e(){
 export MAIL='/var/mail/carl'
 export EDITOR=$emacs_command
 alias cb="xclip -sel clip"
-alias sm="HOME=~/spacemacs emacs"
 function o(){
   xdg-open $1 > /dev/null 2>&1& disown %+
 }
