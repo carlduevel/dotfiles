@@ -93,6 +93,7 @@ function e(){
 export MAIL='/var/mail/carl'
 export EDITOR=$emacs_command
 alias cb="xclip -sel clip"
+alias pwgen2cb="pwgen -s 20 -c 1 | cb"
 function o(){
   xdg-open $1 > /dev/null 2>&1& disown %+
 }
