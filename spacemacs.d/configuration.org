@@ -17,11 +17,6 @@ Pulled from [[https://emacsredux.com/blog/2014/03/22/a-peek-at-emacs-24-dot-4-fo
 #+BEGIN_SRC emacs-lisp
 (add-hook 'text-mode-hook 'auto-fill-mode)
 #+END_SRC
-** Multicursors
-#+BEGIN_SRC emacs-lisp
-  (global-evil-mc-mode 1)
-#+END_SRC
-
 ** Auto-Save in =/tmp=
 
 Store backups and auto-saved files in =TEMPORARY-FILE-DIRECTORY= (which

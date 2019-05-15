@@ -40,6 +40,7 @@ values."
      helm
      markdown
      org
+     (multiple-cursors :variables multiple-cursors-backend 'evil-mc)
      python
      restclient
      shell
