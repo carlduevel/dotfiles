@@ -3,8 +3,7 @@ repository = ~/.dotfiles
 packages = ['config']
 ignore = [
     '.git',
+    '.gitmodules',
     '.gitignore',
     '*.swp']
-externals = {
-    '.bzr.log':     '/dev/null',
-    '.uml':         '/tmp'}
+externals = {}
