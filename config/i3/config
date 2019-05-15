@@ -240,7 +240,7 @@ bindsym $mod+x [floating] move scratchpad
 # Bring back floating windows from 'scratchpad'
 bindsym $mod+shift+x scratchpad show
 # Start a new emacs client
-bindsym $mod+m exec emacsclient --create-frame  --alternate-editor=""
+bindsym $mod+m exec --no-startup-id "emacsclient --create-frame"
 # Capture on the spot
 bindsym $mod+o exec emacsclient -c -F '(quote (name . "org-protocol-capture"))' -e '(org-capture)'
 
