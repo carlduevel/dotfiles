@@ -37,36 +37,36 @@ Always indent for better overview.
 #+END_SRC
 ** GTD setup
 #+BEGIN_SRC emacs-lisp
-(require 'org)
-(setq gtd-dir "~/Dropbox/org/gtd/")
-(setq inbox-file (concat gtd-dir "inbox.org"))
-(setq gtd-file (concat gtd-dir "gtd.org"))
-(setq tickler-file (concat gtd-dir "tickler.org"))
-(setq org-agenda-files (list
-                        inbox-file
-                        gtd-file
-                        tickler-file))
-(setq org-agenda-skip-scheduled-if-done t)
-(setq org-agenda-skip-deadline-prewarning-if-scheduled t)
-(setq org-agenda-skip-deadline-if-done t)
+  (require 'org)
+  (setq gtd-dir "~/Dropbox/org/gtd/")
+  (setq inbox-file (concat gtd-dir "inbox.org"))
+  (setq gtd-file (concat gtd-dir "gtd.org"))
+  (setq tickler-file (concat gtd-dir "tickler.org"))
+  (setq org-agenda-files (list
+                          inbox-file
+                          gtd-file
+                          tickler-file))
+  (setq org-agenda-skip-scheduled-if-done t)
+  (setq org-agenda-skip-deadline-prewarning-if-scheduled t)
+  (setq org-agenda-skip-deadline-if-done t)
 
 
 
-(setq org-todo-keywords
-      '((sequence "TODO" "|" "DONE")
-        (sequence "PROJECT" "AGENDA" "|" "MINUTES")
-        (sequence "WAITING" "|" "PROGRESS")))
+  (setq org-todo-keywords
+        '((sequence "TODO(t!)" "|" "DONE(d!)")
+          (sequence "PROJECT(p!)" "AGENDA(a!)" "|" "MINUTES(m!)")
+          (sequence "WAITING(w!)" "|" "PROGRESS(p!)")))
 
 
-(setq org-refile-targets '((org-agenda-files :maxlevel . 3)))
-(setq org-refile-use-outline-path 'file)
+  (setq org-refile-targets '((org-agenda-files :maxlevel . 3)))
+  (setq org-refile-use-outline-path 'file)
 
-(setq org-agenda-custom-commands
-      '(("h" "@home" tags-todo "@home")
-        ("c" "@computer" tags-todo "@computer")
-        ("H" "+hasi" tags-todo "+hasi")
-        ("p" "@phone" tags-todo "@phone")
-        ("b" "@BO" tags-todo "@BO")))
+  (setq org-agenda-custom-commands
+        '(("h" "@home" tags-todo "@home")
+          ("c" "@computer" tags-todo "@computer")
+          ("H" "+hasi" tags-todo "+hasi")
+          ("p" "@phone" tags-todo "@phone")
+          ("b" "@BO" tags-todo "@BO")))
 #+END_SRC
 Org Capture Templates are explained [[http://orgmode.org/manual/Capture-templates.html][here]] and Org Template expansion
 [[http://orgmode.org/manual/Template-expansion.html#Template-expansion][here.]] There is also a  need to load org-protocol to get the
