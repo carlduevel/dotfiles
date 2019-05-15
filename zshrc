@@ -101,3 +101,11 @@ alias tf=terraform
 fpath=(~/opt/gcloud-zsh-completion/src $fpath)
 autoload -U compinit compdef
 compinit
+docker-tags(){
+    i=0
+    while [ $? == 0 ]
+    do 
+        i=$((i+1))
+        curl https://registry.hub.docker.com/v2/repositories/library/$1/tags/?page=$i 2>/dev/null|jq -r '."results"[]["name"]'
+    done
+}
