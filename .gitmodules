@@ -1,3 +1,6 @@
 [submodule "spacemacs.d/layers/journal"]
 	path = spacemacs.d/layers/journal
 	url = git@github.com:ruibinx/spacemacs-journal.git
+[submodule "oh-my-zsh"]
+	path = oh-my-zsh
+	url = https://github.com/robbyrussell/oh-my-zsh.git
