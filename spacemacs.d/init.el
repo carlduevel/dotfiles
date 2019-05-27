@@ -37,6 +37,7 @@ values."
      docker
      emacs-lisp
      git
+     go
      helm
      html
      (journal :variables org-journal-dir "~/Dropbox/org/journal/" )
