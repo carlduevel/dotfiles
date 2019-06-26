@@ -247,6 +247,8 @@ bindsym $mod+o exec emacsclient -c -F '(quote (name . "org-protocol-capture"))' 
 
 # >>> Plasma Integration <<<
 
+# Manual tweak needed: In Pager Settings for Virtual Workspaces set Display to Desktop Name!
+
 # Try to kill the wallpaper set by Plasma (it takes up the entire workspace
 # and hides everythiing)
 exec --no-startup-id wmctrl -c Plasma
