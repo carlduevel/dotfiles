@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name:Here document 
+# key: here 
+# --
+cat << EOF > $1
+$2
+EOF
