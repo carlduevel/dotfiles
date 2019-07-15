@@ -108,3 +108,7 @@ docker-tags(){
         curl https://registry.hub.docker.com/v2/repositories/library/$1/tags/?page=$i 2>/dev/null|jq -r '."results"[]["name"]'
     done
 }
+# jq with colored pagination
+jqjq() {
+    jq -C "$@" | less -FR
+}
