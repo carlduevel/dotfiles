@@ -63,11 +63,11 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='emacsclient'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -91,7 +91,6 @@ function e(){
   emacsclient --alternate-editor='' --create-frame $1 & disown %+
 } 
 export MAIL='/var/mail/carl'
-export EDITOR=$emacs_command
 alias cb="xclip -sel clip"
 alias pwgen2cb="pwgen -s 20 -c 1 | cb"
 function o(){
