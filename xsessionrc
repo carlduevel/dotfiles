@@ -1,5 +1,5 @@
 #!/bin/bash
-
+export TERMINAL=qterminal
 # Load gnome-keyring
 dbus-update-activation-environment --systemd DISPLAY
 eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
