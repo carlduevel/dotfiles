@@ -30,8 +30,7 @@ values."
    dotspacemacs-configuration-layer-path '()
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
-   '(systemd
-     ansible
+   '(ansible
      auto-completion
      chrome
      csv
@@ -41,10 +40,11 @@ values."
      go
      helm
      html
+     javascript
      (journal :variables org-journal-dir "~/Dropbox/org/journal/" )
+     (org :variables org-enable-reveal-js-support t org-startup-indented t org-want-todo-bindings t)
      markdown
      (multiple-cursors :variables multiple-cursors-backend 'evil-mc)
-     (org :variables org-enable-reveal-js-support t org-startup-indented t org-want-todo-bindings t)
      python
      restclient
      shell
@@ -52,6 +52,7 @@ values."
      spell-checking
      sql
      syntax-checking
+     systemd
      thesaurus
      version-control
      writeroom
@@ -348,7 +349,7 @@ This function is called at the very end of Spacemacs initialization."
  '(evil-want-Y-yank-to-eol nil)
  '(package-selected-packages
    (quote
-    (systemd web-mode tagedit slim-mode scss-mode sass-mode pug-mode helm-css-scss haml-mode emmet-mode company-web web-completion-data ox-reveal yapfify pyvenv pytest pyenv-mode py-isort pip-requirements live-py-mode hy-mode dash-functional helm-pydoc cython-mode company-anaconda anaconda-mode pythonic org-journal xterm-color shell-pop multi-term eshell-z eshell-prompt-extras esh-help writeroom-mode visual-fill-column all-the-icons memoize synosaurus gmail-message-mode ham-mode html-to-markdown flymd edit-server yasnippet-snippets yaml-mode smeargle restclient-helm orgit ob-restclient ob-http mmm-mode markdown-toc markdown-mode magit-gitflow jinja2-mode helm-gitignore helm-company helm-c-yasnippet gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter gh-md fuzzy evil-magit magit transient git-commit with-editor dockerfile-mode docker json-mode tablist magit-popup docker-tramp json-snatcher json-reformat diff-hl company-statistics company-shell company-restclient restclient know-your-http-well company-ansible company auto-yasnippet yasnippet ansible-doc ansible ac-ispell auto-complete flyspell-correct-helm flyspell-correct flycheck-pos-tip pos-tip flycheck auto-dictionary insert-shebang fish-mode org-projectile org-category-capture org-present org-pomodoro alert log4e gntp org-mime org-download htmlize gnuplot ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el paradox org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint indent-guide hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu elisp-slime-nav dumb-jump diminish define-word column-enforce-mode clean-aindent-mode auto-highlight-symbol auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line))))
+    (tern nodejs-repl livid-mode skewer-mode js2-refactor multiple-cursors js2-mode js-doc import-js grizzl helm-gtags ggtags counsel-gtags add-node-modules-path web-mode tagedit slim-mode scss-mode sass-mode pug-mode helm-css-scss haml-mode emmet-mode company-web web-completion-data ox-reveal yapfify pyvenv pytest pyenv-mode py-isort pip-requirements live-py-mode hy-mode dash-functional helm-pydoc cython-mode company-anaconda anaconda-mode pythonic org-journal xterm-color shell-pop multi-term eshell-z eshell-prompt-extras esh-help writeroom-mode visual-fill-column all-the-icons memoize synosaurus gmail-message-mode ham-mode html-to-markdown flymd edit-server yasnippet-snippets yaml-mode smeargle restclient-helm orgit ob-restclient ob-http mmm-mode markdown-toc markdown-mode magit-gitflow jinja2-mode helm-gitignore helm-company helm-c-yasnippet gitignore-mode gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe+ git-gutter-fringe fringe-helper git-gutter+ git-gutter gh-md fuzzy evil-magit magit transient git-commit with-editor dockerfile-mode docker json-mode tablist magit-popup docker-tramp json-snatcher json-reformat diff-hl company-statistics company-shell company-restclient restclient know-your-http-well company-ansible company auto-yasnippet yasnippet ansible-doc ansible ac-ispell auto-complete flyspell-correct-helm flyspell-correct flycheck-pos-tip pos-tip flycheck auto-dictionary insert-shebang fish-mode org-projectile org-category-capture org-present org-pomodoro alert log4e gntp org-mime org-download htmlize gnuplot ws-butler winum which-key volatile-highlights vi-tilde-fringe uuidgen use-package toc-org spaceline restart-emacs request rainbow-delimiters popwin persp-mode pcre2el paradox org-plus-contrib org-bullets open-junk-file neotree move-text macrostep lorem-ipsum linum-relative link-hint indent-guide hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-themes helm-swoop helm-projectile helm-mode-manager helm-make helm-flx helm-descbinds helm-ag google-translate golden-ratio flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-lisp-state evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-args evil-anzu eval-sexp-fu elisp-slime-nav dumb-jump diminish define-word column-enforce-mode clean-aindent-mode auto-highlight-symbol auto-compile aggressive-indent adaptive-wrap ace-window ace-link ace-jump-helm-line))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
