@@ -35,6 +35,11 @@ Always indent for better overview.
 #+BEGIN_SRC emacs-lisp
 (add-hook 'org-mode-hook 'org-indent-mode)
 #+END_SRC
+ Hide empty lines between sub-headers in collapsed view.
+#+BEGIN_SRC emacs-lisp
+(setq org-cycle-separator-lines 0)
+#+END_SRC
+#+END_SRC
 ** GTD setup
 #+BEGIN_SRC emacs-lisp
   (require 'org)
