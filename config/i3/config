@@ -273,3 +273,6 @@ for_window [window_role="About"] floating enable
 for_window [window_type="dialog"] floating enable
 for_window [window_type="menu"] floating enable
 
+# Moving workspaces between screens 
+bindsym $mod+p move workspace to output right
+bindsym $mod+n move workspace to output left
