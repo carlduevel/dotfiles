@@ -50,15 +50,12 @@ Log state changes of todos into the LOGBOOK drawer.
   (setq gtd-dir (concat org-dir "gtd/"))
   (setq inbox-file (concat gtd-dir "inbox.org"))
   (setq gtd-file (concat gtd-dir "gtd.org"))
-  (setq tickler-file (concat gtd-dir "tickler.org"))
   (setq org-agenda-files (list
                           inbox-file
-                          gtd-file
-                          tickler-file))
+                          gtd-file))
   (setq org-agenda-skip-scheduled-if-done t)
   (setq org-agenda-skip-deadline-prewarning-if-scheduled t)
-  (setq org-agenda-skip-deadline-if-done t)
-
+  (setq org-agenda-window-setup 'current-window) 
 
 
   (setq org-todo-keywords
@@ -83,28 +80,24 @@ Org Capture Templates are explained [[http://orgmode.org/manual/Capture-template
 
 #+BEGIN_SRC emacs-lisp
   (setq org-default-notes-file  inbox-file)
-  (define-key global-map "\C-cc" 'org-capture)
 
   (require 'org-protocol)
 
   (setq snippets-file (concat org-dir "snippets.org"))
 
   (setq org-capture-templates '(("t" "Todo" entry
-                                 (file+headline  inbox-file "Misc")"* TODO %i%?")
-                                ("i" "Idea" entry
-                                 (file  "~/Dropbox/org/ideas.org")"* %i%?")
+                                 (file+headline  gtd-file "Misc")"* TODO %i%?")
+                                ("i" "Inbox" entry
+                                 (file+headline  inbox-file "To process:")"* %i%?")
                                 ("s" "Code Snippet" entry (file+headline snippets-file "Snippets")
                                  ;; Prompt for tag and language
                                  "* %?\t%^g\n#+BEGIN_SRC %^{language}\n%i\n#+END_SRC")
-                                ("p" "Protocol" entry
-                                 (file+headline inbox-file "Inbox")
+                                ("q" "Protocol" entry
+                                 (file+headline inbox-file "Quotes")
                                  "* %^{Title}\nSource: %u, %c\n #+BEGIN_QUOTE\n%i\n#+END_QUOTE\n\n\n%?")
                                 ("L" "Protocol Link" entry
-                                 (file+headline inbox-file "Inbox")
-                                 "* %? [[%:link][%:description]] \nCaptured on: %U")
-                                ("T" "Tickler" entry
-                                 (file+headline tickler-file "Tickler")
-                                 "* %i%? \n %U")))
+                                 (file+headline inbox-file "Links")
+                                 "* %? [[%:link][%:description]] \nCaptured on: %U")))
 
 #+END_SRC
 * Neotree
