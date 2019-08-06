@@ -120,4 +120,12 @@ According to this[[https://github.com/jaypei/emacs-neotree/issues/126][ bug repo
 #+BEGIN_SRC emacs-lisp
 (setq neo-vc-integration '(face))
 #+END_SRC
+* Programming
+** Clojure
+Pretty symbols for anonymous functions, set literals and partial, like =(λ [a]
+(+ a 5))=, =ƒ(+ % 5)=, =∈{2 4 6}= and =Ƥ=.
+#+BEGIN_SRC emacs-lisp
+  (setq clojure-enable-fancify-symbols t)
+#+END_SRC
+
 
