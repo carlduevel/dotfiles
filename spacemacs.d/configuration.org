@@ -100,6 +100,10 @@ Org Capture Templates are explained [[http://orgmode.org/manual/Capture-template
                                  "* %? [[%:link][%:description]] \nCaptured on: %U")))
 
 #+END_SRC
+*** Projects
+#+BEGIN_SRC emacs-lisp
+  (setq org-stuck-projects '("/PROJECT" ("TODO" "NEXT" "WAITING") nil nil))
+#+END_SRC
 ** Keybindings
 I set TODOs to done all the time and archive them afterwards. This should be one
 shortcut.
