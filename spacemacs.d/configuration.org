@@ -100,6 +100,16 @@ Org Capture Templates are explained [[http://orgmode.org/manual/Capture-template
                                  "* %? [[%:link][%:description]] \nCaptured on: %U")))
 
 #+END_SRC
+** Keybindings
+I set TODOs to done all the time and archive them afterwards. This should be one
+shortcut.
+#+BEGIN_SRC emacs-lisp
+  (defun done-archive ()
+    (interactive)
+    (org-todo "DONE")
+    (org-archive-subtree-default))
+  (spacemacs/set-leader-keys "od" 'done-archive)
+#+END_SRC 
 * Neotree
 In order to have nice icons for neotree[[https://github.com/domtronn/all-the-icons.el][ all-the-icons package]]  has to be installed.
 #+BEGIN_SRC emacs-lisp 
