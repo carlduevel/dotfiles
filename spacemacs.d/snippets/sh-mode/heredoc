@@ -2,6 +2,6 @@
 # name:Here document 
 # key: here 
 # --
-cat << EOF > $1
+cat << HERE > $1
 $2
-EOF
+HERE
