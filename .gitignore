@@ -4,3 +4,4 @@ task/*.data
 task/*.pem
 spacemacs.d/configuration.el
 spacemacs.d/*.elc
+spacemacs.d/.spacemacs.env
