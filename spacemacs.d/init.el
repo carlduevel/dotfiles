@@ -42,8 +42,7 @@ values."
      helm
      html
      javascript
-     (journal :variables org-journal-dir "~/Dropbox/org/journal/" )
-     (org :variables org-enable-reveal-js-support t org-startup-indented t org-want-todo-bindings t org-enable-bootstrap-support t)
+     (org :variables org-enable-reveal-js-support t org-startup-indented t org-want-todo-bindings t org-enable-org-journal-support t)
      markdown
      (multiple-cursors :variables multiple-cursors-backend 'evil-mc)
      python
@@ -59,7 +58,6 @@ values."
      systemd
      thesaurus
      version-control
-     writeroom
      yaml)
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these

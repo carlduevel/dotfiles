@@ -43,6 +43,10 @@ Log state changes of todos into the LOGBOOK drawer.
 #+BEGIN_SRC emacs-lisp
 (setq org-log-into-drawer t)
 #+END_SRC
+Hide leading stars.
+#+BEGIN_SRC emacs-lisp
+(setq org-hide-leading-stars t)
+#+END_SRC
 ** GTD setup
 #+BEGIN_SRC emacs-lisp
   (require 'org)
@@ -114,6 +118,10 @@ shortcut.
     (org-archive-subtree-default))
   (spacemacs/set-leader-keys "od" 'done-archive)
 #+END_SRC 
+** Org extensions
+#+BEGIN_SRC emacs-lisp
+(setq org-journal-dir "~/Dropbox/org/journal/")
+#+END_SRC
 * Neotree
 In order to have nice icons for neotree[[https://github.com/domtronn/all-the-icons.el][ all-the-icons package]]  has to be installed.
 #+BEGIN_SRC emacs-lisp 
