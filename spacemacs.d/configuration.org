@@ -29,6 +29,11 @@ file.
 (setq auto-save-file-name-transforms
       `((".*" ,temporary-file-directory t)))
 #+END_SRC
+** Always follow symlinks
+When opening a file, always follow symlinks.
+#+BEGIN_SRC emacs-lisp
+(setq vc-follow-symlinks t)
+#+END_SRC
 * Org mode
 ** UI
 Always indent for better overview.
