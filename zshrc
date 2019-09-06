@@ -112,3 +112,5 @@ docker-tags(){
 jqjq() {
     jq -C "$@" | less -FR
 }
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
