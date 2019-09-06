@@ -139,5 +139,17 @@ Pretty symbols for anonymous functions, set literals and partial, like =(λ [a]
 #+BEGIN_SRC emacs-lisp
   (setq clojure-enable-fancify-symbols t)
 #+END_SRC
+* Prose
+** Thesaurus
+Change the thesaurus language via shortcut.
+#+BEGIN_SRC emacs-lisp 
+  (defun synosaurus/switch-english ()
+      (interactive)
+      (setq synosaurus-backend 'synosaurus-backend-wordnet))
+  (defun synosaurus/switch-german ()
+    (interactive)
+    (setq synosaurus-backend 'synosaurus-backend-openthesaurus))
 
-
+  (spacemacs/set-leader-keys "oe" 'synosaurus/switch-english)
+  (spacemacs/set-leader-keys "og" 'synosaurus/switch-german)
+#+END_SRC
