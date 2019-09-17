@@ -1,0 +1,79 @@
+# -*- mode: snippet -*-
+#name : parse_args
+#key : parse_args
+#contributor : carl
+# --
+# Parse command-line options
+
+# Option strings
+SHORT=phd:m
+LONG=port:,help,days-valid:,prtg
+# TODO: Can the argument parsing be put in a function
+
+function help() {
+    me=`basename "$0"`
+    cat << HELP 
+Usage:
+ $me <servername>
+ $me [options] <servername>
+
+Options:
+ -d, --days-valid     number of days the ssl certificate has to be valid (default 30)
+ -p, --port           port to use (default 443)
+ -h, --help           display this help
+ -m, --prtg           Make the script behave as a prtg script sensor.
+
+Fails if the ssl certifacate is not valid more than the given number of days
+
+HELP
+}
+
+function error() {
+    echo "Failed to parse options...exiting." >&2
+    help
+    exit 1
+}
+# read the options
+OPTS=$(getopt --options $SHORT --long $LONG --name "$0" -- "$@" || error )
+
+eval set -- "$OPTS"
+
+# set initial values
+PORT=443
+DAYS_VALID=30
+PRTG_OUTPUT=false
+# extract options and their arguments into variables.
+while true ; do
+    case "\$1" in
+        -h | --help )
+            help
+            exit 0
+            ;;
+       -p | --port)
+            PORT="$2"
+            shift 2
+            ;;
+        -d | --days-valid )
+            DAYS_VALID="$2"
+            shift 2
+            ;;
+        -m | --prtg )
+            PRTG_OUTPUT=true
+            shift 1
+            ;;
+        -- )
+            shift
+            break
+            ;;
+        *)
+            echo "Internal error!"
+            exit 1
+            ;;
+    esac
+done
+SERVERNAME=${1:-""}
+if [ -z "${SERVERNAME}" ]; then
+    echo "Servername argument missing" >&2
+    help
+    exit 1
+fi
