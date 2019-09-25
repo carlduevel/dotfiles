@@ -51,7 +51,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git aws terraform taskwarrior kubectl lein rails nvm docker docker-compose)
+plugins=(git aws terraform kubectl lein docker docker-compose)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -84,9 +84,7 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 eval $(thefuck --alias)
-eval "$(rbenv init -)"
 . /usr/share/autojump/autojump.sh
-alias tw=timew
 function e(){
   emacsclient --alternate-editor='' --create-frame $1 & disown %+
 } 
@@ -96,10 +94,10 @@ alias pwgen2cb="pwgen -s 20 -c 1 | cb"
 function o(){
   xdg-open $1 > /dev/null 2>&1& disown %+
 }
-alias tf=terraform
-fpath=(~/opt/gcloud-zsh-completion/src $fpath)
-autoload -U compinit compdef
-compinit
+# alias tf=terraform
+# fpath=(~/opt/gcloud-zsh-completion/src $fpath)
+# autoload -U compinit compdef
+# compinit
 docker-tags(){
     i=0
     while [ $? == 0 ]
