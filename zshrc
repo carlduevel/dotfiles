@@ -114,3 +114,7 @@ jqjq() {
 }
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+GOPATH=~/.go
+export GOPATH
+PATH=$PATH:$GOPATH/bin
