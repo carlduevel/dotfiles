@@ -1,0 +1,11 @@
+[Unit]
+Description=Bookmarks
+After=default.target
+Requires=default.target
+[Service]
+ExecStart=/usr/bin/docker run -p 127.0.0.1:8181:80 bookmarks:latest
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=default.target
