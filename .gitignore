@@ -1,5 +1,6 @@
 lein/self-installs
 lein/repl-history
+lein/repl-port
 task/*.data
 task/*.pem
 spacemacs.d/configuration.el
