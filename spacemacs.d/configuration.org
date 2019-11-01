@@ -100,8 +100,9 @@ Org Capture Templates are explained [[http://orgmode.org/manual/Capture-template
 
 #+BEGIN_SRC emacs-lisp
   (setq org-default-notes-file  inbox-file)
-
+  (server-start)
   (require 'org-protocol)
+
 
   (setq snippets-file (concat org-dir "snippets.org"))
   (setq quotes-file (concat org-dir "quotes.org"))
@@ -120,7 +121,7 @@ Org Capture Templates are explained [[http://orgmode.org/manual/Capture-template
                                  "* %?\t%^g\n#+BEGIN_QUOTE\n%i\n#+END_QUOTE\n%^{source}")
                                 ("q" "Protocol" entry
                                  (file+headline inbox-file "Quotes")
-                                 "* %^{Title}\nSource: %u, %c\n #+BEGIN_QUOTE\n%i\n#+END_QUOTE\n\n\n%?")
+                                 "* %? [[%:link][%:description]]\nCaptured on: %U\n #+BEGIN_QUOTE\n%i\n#+END_QUOTE\n")
                                 ("L" "Protocol Link" entry
                                  (file+headline inbox-file "Links")
                                  "* %? [[%:link][%:description]] \nCaptured on: %U")))
