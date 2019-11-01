@@ -69,6 +69,7 @@ Hide leading stars.
   (setq gtd-dir (concat org-dir "gtd/"))
   (setq inbox-file (concat gtd-dir "inbox.org"))
   (setq gtd-file (concat gtd-dir "gtd.org"))
+  (setq sm-file (concat gtd-dir "someday_maybe.org"))
   (setq org-agenda-files (list
                           inbox-file
                           gtd-file))
@@ -109,6 +110,8 @@ Org Capture Templates are explained [[http://orgmode.org/manual/Capture-template
                                  (file+headline  gtd-file "Misc")"* TODO %i%?")
                                 ("i" "Inbox" entry
                                  (file+headline  inbox-file "To process:")"* %i%?")
+                                ("m" "SomedayMaybe" entry
+                                 (file+headline  sm-file "To process:")"* %i%?")
                                 ("s" "Code Snippet" entry (file+headline snippets-file "Snippets")
                                  ;; Prompt for tag and language
                                  "* %?\t%^g\n#+BEGIN_SRC %^{language}\n%i\n#+END_SRC")
