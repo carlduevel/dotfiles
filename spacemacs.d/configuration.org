@@ -34,6 +34,16 @@ When opening a file, always follow symlinks.
 #+BEGIN_SRC emacs-lisp
 (setq vc-follow-symlinks t)
 #+END_SRC
+** Format whole file
+#+BEGIN_SRC emacs-lisp
+  (defun indent-buffer ()
+    (interactive)
+    (save-excursion
+      (indent-region (point-min) (point-max) nil)))
+  (spacemacs/set-leader-keys "or" 'indent-buffer)
+#+END_SRC 
+
+
 * Org mode
 ** UI
 Always indent for better overview.
