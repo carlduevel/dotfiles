@@ -94,10 +94,6 @@ alias pwgen2cb="pwgen -s 20 -c 1 | cb"
 function o(){
   xdg-open $1 > /dev/null 2>&1& disown %+
 }
-# alias tf=terraform
-# fpath=(~/opt/gcloud-zsh-completion/src $fpath)
-# autoload -U compinit compdef
-# compinit
 docker-tags(){
     i=0
     while [ $? == 0 ]
