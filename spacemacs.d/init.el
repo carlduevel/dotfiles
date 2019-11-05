@@ -56,6 +56,7 @@ values."
      sql
      syntax-checking
      systemd
+     terraform
      thesaurus
      version-control
      yaml)
