@@ -113,3 +113,4 @@ GOPATH=~/.go
 export GOPATH
 PATH=$PATH:$GOPATH/bin
 source ~/.ottorc
+alias tf=terraform
