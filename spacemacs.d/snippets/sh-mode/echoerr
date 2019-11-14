@@ -1,0 +1,6 @@
+# -*- mode: snippet -*-
+#name : echoerr
+#key : echoerr
+#contributor : carl
+# --
+echoerr() { printf "%s\n" "$*" >&2; }
