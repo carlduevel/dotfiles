@@ -162,6 +162,10 @@ Pretty symbols for anonymous functions, set literals and partial, like =(λ [a]
 #+BEGIN_SRC emacs-lisp
   (setq clojure-enable-fancify-symbols t)
 #+END_SRC
+Get rid of those reevaluation warnings for refactorings.
+#+BEGIN_SRC emacs-lisp
+  (setq cljr-warn-on-eval nil)
+#+END_SRC
 ** Git
 Always highlight differences in diff.
 #+BEGIN_SRC emacs-lisp
