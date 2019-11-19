@@ -58,7 +58,10 @@ values."
      systemd
      terraform
      thesaurus
-     version-control
+     (version-control :variables
+                      version-control-global-margin t
+                      version-control-diff-tool 'diff-hl
+                      version-control-diff-side 'left)
      yaml)
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
