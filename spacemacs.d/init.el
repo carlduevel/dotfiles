@@ -33,7 +33,7 @@ values."
    '(ansible
      auto-completion
      chrome
-     (clojure :variables clojure-enable-clj-refactor t)
+     (clojure :variables clojure-enable-clj-refactor t clojure-enable-linters '(clj-kondo))
      csv
      docker
      emacs-lisp
