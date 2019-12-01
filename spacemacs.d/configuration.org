@@ -166,6 +166,11 @@ Get rid of those reevaluation warnings for refactorings.
 #+BEGIN_SRC emacs-lisp
   (setq cljr-warn-on-eval nil)
 #+END_SRC
+Also do not ask to save the file if evaluating it.
+#+BEGIN_SRC emacs-lisp
+  (setq cider-save-file-on-load t)
+#+END_SRC
+
 ** Git
 Always highlight differences in diff.
 #+BEGIN_SRC emacs-lisp
