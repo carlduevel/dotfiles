@@ -115,3 +115,6 @@ PATH=$PATH:$GOPATH/bin
 source ~/.ottorc
 export GRAALVM_HOME=~/opt/graalvm-ce-19.2.1
 alias tf=terraform
+function idea(){
+    nohup idea $@ > /dev/null & 
+}
