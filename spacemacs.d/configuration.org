@@ -170,10 +170,14 @@ Also do not ask to save the file if evaluating it.
 #+BEGIN_SRC emacs-lisp
   (setq cider-save-file-on-load t)
 #+END_SRC
-
 ** Git
 Always highlight differences in diff.
 #+BEGIN_SRC emacs-lisp
   (setq magit-diff-refine-hunk 'all)
+#+END_SRC
+** Projectile
+Create test files if they do not exist on switching the buffer 
+#+BEGIN_SRC emacs-lisp
+  (setq projectile-create-missing-test-files t)
 #+END_SRC
 
