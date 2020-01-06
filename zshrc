@@ -118,3 +118,12 @@ alias tf=terraform
 function idea(){
     nohup idea $@ > /dev/null & 
 }
+function update-all-repos(){
+    # This needs the following lines in .mrconfig:
+    # [DEFAULT]
+    # git_up = 
+    # git stash -q || true
+    # git pull --rebase
+    # git stash pop -q 2>/dev/null || true
+    mr -j ${nproc} -s up
+}
