@@ -51,7 +51,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(asdf git aws terraform kubectl lein docker pipenv)
+plugins=(asdf git aws terraform kubectl lein docker pipenv autojump)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -84,7 +84,6 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 eval $(thefuck --alias)
-. /usr/share/autojump/autojump.sh
 function e(){
   emacsclient --alternate-editor='' --create-frame $1 & disown %+
 } 
