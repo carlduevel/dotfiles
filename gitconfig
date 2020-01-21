@@ -18,3 +18,5 @@
     cmd = meld "$LOCAL" "$REMOTE"
 [pull]
 	rebase = true
+[rebase]
+	autoStash = true
