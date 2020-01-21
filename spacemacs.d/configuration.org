@@ -170,6 +170,10 @@ Also do not ask to save the file if evaluating it.
 #+BEGIN_SRC emacs-lisp
   (setq cider-save-file-on-load t)
 #+END_SRC
+Always show test results:
+#+BEGIN_SRC emacs-lisp
+  (setq cider-test-show-report-on-success t)
+#+END_SRC
 ** Git
 Always highlight differences in diff.
 #+BEGIN_SRC emacs-lisp
