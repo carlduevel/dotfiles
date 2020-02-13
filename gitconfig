@@ -5,6 +5,7 @@
 	default = simple
 [core]
 	excludesfile = /home/carl/.gitignore
+	editor = vim
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
