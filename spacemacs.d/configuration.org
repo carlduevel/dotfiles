@@ -196,4 +196,10 @@ Create test files if they do not exist on switching the buffer
 #+BEGIN_SRC emacs-lisp
   (setq projectile-create-missing-test-files t)
 #+END_SRC
-
+** Autocompletion
+#+BEGIN_SRC emacs-lisp
+  (setq 
+   auto-completion-enable-help-tooltip t
+   auto-completion-enable-snippets-in-popup t
+   auto-completion-enable-sort-by-usage t)
+#+END_SRC
