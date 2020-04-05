@@ -155,6 +155,11 @@ According to this[[https://github.com/jaypei/emacs-neotree/issues/126][ bug repo
 #+BEGIN_SRC emacs-lisp
 (setq neo-vc-integration '(face))
 #+END_SRC
+Probably costly, but let's try:
+#+BEGIN_SRC emacs-lisp
+  (setq treemacs-project-follow-cleanup t)
+#+END_SRC
+
 * Programming
 ** Clojure
 Pretty symbols for anonymous functions, set literals and partial, like =(λ [a]
@@ -174,6 +179,13 @@ Always show test results:
 #+BEGIN_SRC emacs-lisp
   (setq cider-test-show-report-on-success t)
 #+END_SRC
+[[https://practicalli.github.io/spacemacs/improving-code/formatting/][Recommendated formatting]]:
+#+BEGIN_SRC emacs-lisp
+  (setq clojure-indent-style 'align-arguments
+        clojure-align-forms-automatically t)
+  (add-hook 'clojure-mode-hook #'aggressive-indent-mode)
+#+END_SRC
+
 ** Git
 Always highlight differences in diff.
 #+BEGIN_SRC emacs-lisp
