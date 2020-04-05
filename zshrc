@@ -52,7 +52,7 @@ export DEFAULT_USER=`id -un`
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(asdf git aws terraform kubectl lein docker pipenv autojump)
+plugins=(asdf git aws terraform kubectl lein docker pipenv autojump zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
