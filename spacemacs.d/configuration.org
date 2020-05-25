@@ -154,11 +154,10 @@ In order to have nice icons for neotree[[https://github.com/domtronn/all-the-ico
 (setq neo-theme 'icons)
 #+END_SRC
 Add source control integration.
-According to this[[https://github.com/jaypei/emacs-neotree/issues/126][ bug report]] this is not performing well on big projects.
 #+BEGIN_SRC emacs-lisp
-(setq neo-vc-integration '(face))
+  (setq-default dotspacemacs-configuration-layers '(
+    (treemacs :variables treemacs-use-git-mode 'deferred)))
 #+END_SRC
-Probably costly, but let's try:
 #+BEGIN_SRC emacs-lisp
   (setq treemacs-project-follow-cleanup t)
 #+END_SRC
