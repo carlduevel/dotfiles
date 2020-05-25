@@ -42,7 +42,10 @@ When opening a file, always follow symlinks.
       (indent-region (point-min) (point-max) nil)))
   (spacemacs/set-leader-keys "or" 'indent-buffer)
 #+END_SRC 
-
+** Do not add a newline at the end of the file on save
+#+BEGIN_SRC emacs-lisp
+  (setq require-final-newline nil)
+#+END_SRC
 
 * Org mode
 ** UI
