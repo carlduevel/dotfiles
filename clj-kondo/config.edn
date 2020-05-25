@@ -1,0 +1,7 @@
+{:linters
+ {:unused-referred-var
+  {:exclude {de.otto.tesla.params.paramstore [read-secret]}}
+  :unused-namespace {:exclude [de.otto.tesla.params.paramstore]}
+  }
+
+ }
