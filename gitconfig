@@ -21,3 +21,5 @@
 	rebase = true
 [rebase]
 	autoStash = true
+[alias]
+	unpushed = diff origin/master..HEAD --name-status
