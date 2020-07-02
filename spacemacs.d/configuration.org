@@ -191,6 +191,7 @@ Always show test results:
         clojure-align-forms-automatically t)
   (add-hook 'clojure-mode-hook #'aggressive-indent-mode)
 #+END_SRC
+Custom clj-kondo (with global config).
 #+BEGIN_SRC emacs-lisp
   (setq  flycheck-clj-kondo-clj-executable
          (concat (getenv "HOME") "/.spacemacs.d/clj-kondo-custom" ))
