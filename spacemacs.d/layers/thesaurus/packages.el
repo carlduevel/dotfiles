@@ -6,13 +6,14 @@
     :hook (text-mode . synosaurus-mode)
     :init
     (spacemacs/set-leader-keys 
-      "os" 'synosaurus-choose-and-replace
+      "oc" 'synosaurus-choose-and-replace
       "og" 'thesaurus/german
       "oe" 'thesaurus/english)))
 
 (defun thesaurus/german ()
   (interactive)
-   (setq synosaurus-backend 'synosaurus-backend-openthesaurus))
+  (setq synosaurus-backend 'synosaurus-backend-openthesaurus))
+
 
 (defun thesaurus/english ()
   (interactive)
