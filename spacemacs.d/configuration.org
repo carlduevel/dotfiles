@@ -46,6 +46,10 @@ When opening a file, always follow symlinks.
 #+BEGIN_SRC emacs-lisp
   (setq require-final-newline nil)
 #+END_SRC
+** f and t should work across lines
+#+begin_src emacs-lisp 
+  (setq evil-cross-lines t)
+#+end_src
 
 * Org mode
 ** UI
