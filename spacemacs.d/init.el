@@ -30,15 +30,13 @@ values."
    dotspacemacs-configuration-layer-path '()
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
-   '(ansible
-     auto-completion
+   '(auto-completion
      chrome
      (clojure :variables clojure-enable-clj-refactor t clojure-enable-linters '(clj-kondo))
      csv
      docker
      emacs-lisp
      git
-     go
      helm
      html
      javascript
@@ -46,17 +44,12 @@ values."
      markdown
      (multiple-cursors :variables multiple-cursors-backend 'evil-mc)
      python
-     restclient
-     ruby
-     ruby-on-rails
-     rust
      shell
      shell-scripts
      spell-checking
      sql
      syntax-checking
      systemd
-     terraform
      thesaurus
      (version-control :variables
                       version-control-global-margin t
