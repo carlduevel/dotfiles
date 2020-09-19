@@ -199,7 +199,6 @@ Always show test results:
 #+BEGIN_SRC emacs-lisp
   (setq clojure-indent-style 'align-arguments
         clojure-align-forms-automatically t)
-  (add-hook 'clojure-mode-hook #'aggressive-indent-mode)
 #+END_SRC
 Custom clj-kondo (with global config).
 #+BEGIN_SRC emacs-lisp
