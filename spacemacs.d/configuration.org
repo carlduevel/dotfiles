@@ -152,6 +152,21 @@ shortcut.
 #+BEGIN_SRC emacs-lisp
 (setq org-journal-dir "~/Dropbox/org/journal/")
 #+END_SRC
+*** Org Roam
+#+BEGIN_SRC emacs-lisp
+  (setq org-roam-directory (concat (getenv "HOME") "/Dropbox/org-roam"))
+  (require 'org-roam-protocol)
+  (setq org-roam-ref-capture-templates
+        '(("r" "ref" plain (function org-roam-capture--get-point)
+           "%?"
+           :file-name "websites/${slug}"
+           :head "#+TITLE: ${title}
+      ,#+ROAM_KEY: ${ref}
+      - source :: ${ref}"
+           :unnarrowed t)))
+#+END_SRC
+
+
 * Neotree
 In order to have nice icons for neotree[[https://github.com/domtronn/all-the-icons.el][ all-the-icons package]]  has to be installed.
 #+BEGIN_SRC emacs-lisp 
