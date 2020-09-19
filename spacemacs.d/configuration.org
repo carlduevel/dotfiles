@@ -207,13 +207,13 @@ Custom clj-kondo (with global config).
 
 #+END_SRC
 #+BEGIN_SRC emacs-lisp
-  (defun cider-inspect-last-sexp-with-popup ()
-    (interactive)
-    (cider-inspect-last-sexp)
-    (switch-to-buffer "*cider-inspect*")
-    ;; (pop-to-buffer  "*cider-inspect*")
-    )
-  (spacemacs/set-leader-keys "oi" 'cider-inspect-last-sexp-with-popup)
+    (defun cider-inspect-last-sexp-with-popup ()
+      (interactive)
+      (cider-inspect-last-sexp)
+      (switch-to-buffer "*cider-inspect*")
+      ;; (pop-to-buffer  "*cider-inspect*")
+      )
+  (spacemacs/set-leader-keys-for-major-mode 'clojure-mode  "oi" 'cider-inspect-last-sexp-with-popup)
 #+END_SRC
 ** Git
 Always highlight differences in diff.
