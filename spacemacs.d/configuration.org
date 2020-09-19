@@ -106,32 +106,31 @@ Org Capture Templates are explained [[http://orgmode.org/manual/Capture-template
 [[https://github.com/sprig/org-capture-extension][org-capture-extension]] going.
 
 #+BEGIN_SRC emacs-lisp
-  (setq org-default-notes-file  inbox-file)
-  (server-start)
-  (require 'org-protocol)
+    (setq org-default-notes-file  inbox-file)
+    (require 'org-protocol)
 
 
-  (setq snippets-file (concat org-dir "snippets.org"))
-  (setq quotes-file (concat org-dir "quotes.org"))
+    (setq snippets-file (concat org-dir "snippets.org"))
+    (setq quotes-file (concat org-dir "quotes.org"))
 
-  (setq org-capture-templates '(("t" "Todo" entry
-                                 (file+headline  gtd-file "Misc")"* TODO %i%?")
-                                ("i" "Inbox" entry
-                                 (file+headline  inbox-file "To process:")"* %i%?")
-                                ("m" "SomedayMaybe" entry
-                                 (file+headline  sm-file "To process:")"* %i%?")
-                                ("s" "Code Snippet" entry (file+headline snippets-file "Snippets")
-                                 ;; Prompt for tag and language
-                                 "* %?\t%^g\n#+BEGIN_SRC %^{language}\n%i\n#+END_SRC")
-                                ("Q" "Quote" entry (file+headline quotes-file "To order")
-                                 ;; Prompt for tag and language
-                                 "* %?\t%^g\n#+BEGIN_QUOTE\n%i\n#+END_QUOTE\n%^{source}")
-                                ("q" "Protocol" entry
-                                 (file+headline inbox-file "Quotes")
-                                 "* %? [[%:link][%:description]]\nCaptured on: %U\n #+BEGIN_QUOTE\n%i\n#+END_QUOTE\n")
-                                ("L" "Protocol Link" entry
-                                 (file+headline inbox-file "Links")
-                                 "* %? [[%:link][%:description]] \nCaptured on: %U")))
+    (setq org-capture-templates '(("t" "Todo" entry
+                                   (file+headline  gtd-file "Misc")"* TODO %i%?")
+                                  ("i" "Inbox" entry
+                                   (file+headline  inbox-file "To process:")"* %i%?")
+                                  ("m" "SomedayMaybe" entry
+                                   (file+headline  sm-file "To process:")"* %i%?")
+                                  ("s" "Code Snippet" entry (file+headline snippets-file "Snippets")
+                                   ;; Prompt for tag and language
+                                   "* %?\t%^g\n#+BEGIN_SRC %^{language}\n%i\n#+END_SRC")
+                                  ("Q" "Quote" entry (file+headline quotes-file "To order")
+                                   ;; Prompt for tag and language
+                                   "* %?\t%^g\n#+BEGIN_QUOTE\n%i\n#+END_QUOTE\n%^{source}")
+                                  ("q" "Protocol" entry
+                                   (file+headline inbox-file "Quotes")
+                                   "* %? [[%:link][%:description]]\nCaptured on: %U\n #+BEGIN_QUOTE\n%i\n#+END_QUOTE\n")
+                                  ("L" "Protocol Link" entry
+                                   (file+headline inbox-file "Links")
+                                   "* %? [[%:link][%:description]] \nCaptured on: %U")))
 
 #+END_SRC
 *** Projects
@@ -149,6 +148,7 @@ shortcut.
   (spacemacs/set-leader-keys "od" 'done-archive)
 #+END_SRC 
 ** Org extensions
+*** Org Journal
 #+BEGIN_SRC emacs-lisp
 (setq org-journal-dir "~/Dropbox/org/journal/")
 #+END_SRC
