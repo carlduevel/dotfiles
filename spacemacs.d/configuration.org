@@ -50,6 +50,16 @@ When opening a file, always follow symlinks.
 #+begin_src emacs-lisp 
   (setq evil-cross-lines t)
 #+end_src
+** Handling long lines more gracefully
+All the tips from [[https://200ok.ch/posts/2020-09-29_comprehensive_guide_on_handling_long_lines_in_emacs.html][Alain's great post:]] 
+#+BEGIN_SRC emacs-lisp
+  (setq bidi-paragraph-direction 'left-to-right)
+  (if (version<= "27.1" emacs-version)
+      (setq bidi-inhibit-bpa t))
+  (if (version<= "27.1" emacs-version)
+      (global-so-long-mode 1))
+#+END_SRC
+
 
 * Org mode
 ** UI
