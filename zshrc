@@ -87,7 +87,10 @@ fi
 eval $(thefuck --alias)
 function e(){
   emacsclient --alternate-editor='' --create-frame $1 & disown %+
-} 
+}
+function de(){
+    emacs --with-profile doom $1 & disown %+
+}
 export MAIL='/var/mail/carl'
 alias cb="xclip -sel clip"
 alias pwgen2cb="pwgen -s 20 -c 1 | cb"

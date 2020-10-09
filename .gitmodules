@@ -8,3 +8,6 @@
 	path = emacs.d
 	url = https://github.com/syl20bnr/spacemacs.git
   branch = develop
+[submodule "doom-emacs.d"]
+	path = doom-emacs.d
+	url = ./doom-emacs.d
