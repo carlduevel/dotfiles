@@ -89,6 +89,7 @@ function e(){
   emacsclient --alternate-editor='' --create-frame $1 & disown %+
 }
 function de(){
+    # This needs chemacs: https://github.com/plexus/chemacs
     emacs --with-profile doom $1 & disown %+
 }
 export MAIL='/var/mail/carl'
