@@ -1,1 +1,1 @@
-export KDEWM=/usr/bin/i3
+export KDEWM=/home/carl/.dotfiles/config/plasma-workspace/env/kde-i3
