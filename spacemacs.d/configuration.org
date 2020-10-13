@@ -122,11 +122,21 @@ Org Capture Templates are explained [[http://orgmode.org/manual/Capture-template
 
     (setq snippets-file (concat org-dir "snippets.org"))
     (setq quotes-file (concat org-dir "quotes.org"))
+  (defun org-journal-find-location ()
+    ;; Open today's journal, but specify a non-nil prefix argument in order to
+    ;; inhibit inserting the heading; org-capture will insert the heading.
+    (org-journal-new-entry t)
+    (org-narrow-to-subtree)
+    (goto-char (point-max)))
+
 
     (setq org-capture-templates '(("t" "Todo" entry
                                    (file+headline  gtd-file "Misc")"* TODO %i%?")
                                   ("i" "Inbox" entry
                                    (file+headline  inbox-file "To process:")"* %i%?")
+                                ("j" "Journal entry" plain (function org-journal-find-location)
+                               "** %(format-time-string org-journal-time-format)%^{Title}\n%i%?"
+                               :jump-to-captured t :immediate-finish t)
                                   ("m" "SomedayMaybe" entry
                                    (file+headline  sm-file "To process:")"* %i%?")
                                   ("s" "Code Snippet" entry (file+headline snippets-file "Snippets")
@@ -160,7 +170,8 @@ shortcut.
 ** Org extensions
 *** Org Journal
 #+BEGIN_SRC emacs-lisp
-(setq org-journal-dir "~/Dropbox/org/journal/")
+  (setq org-journal-dir "~/Dropbox/org/journal/"
+        org-journal-file-type 'yearly)
 #+END_SRC
 *** Org Roam
 #+BEGIN_SRC emacs-lisp
