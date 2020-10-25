@@ -31,7 +31,7 @@ values."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(auto-completion
-     chrome
+     ;; chrome
      (clojure :variables clojure-enable-clj-refactor t clojure-enable-linters '(clj-kondo))
      csv
      docker
