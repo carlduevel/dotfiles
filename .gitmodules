@@ -11,3 +11,6 @@
 [submodule "doom-emacs.d"]
 	path = doom-emacs.d
 	url = ./doom-emacs.d
+[submodule "asdf"]
+	path = asdf
+	url = ./asdf
