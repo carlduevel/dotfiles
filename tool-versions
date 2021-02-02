@@ -2,3 +2,5 @@ terraform 0.12.26
 leiningen 2.9.5
 kubectx 0.9.1
 kubectl 1.19.7
+maven 3.6.3
+helm 3.5.0
