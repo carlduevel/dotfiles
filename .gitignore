@@ -7,3 +7,4 @@ spacemacs.d/configuration.el
 spacemacs.d/*.elc
 spacemacs.d/.spacemacs.env
 .cache/
+lein/credentials.clj
